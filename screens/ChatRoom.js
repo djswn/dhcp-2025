@@ -19,7 +19,7 @@ export default function ChatRoom({
 
   //여기 cmd에 ipconfig 쳐서 IPv4 주소로 바꿔야함... 휴대폰이랑 같은 와이파이 사용해야함
   useEffect(() => {
-    ws.current = new WebSocket("ws://192.168.35.110:8000/ws");
+    ws.current = new WebSocket("ws://172.20.10.11:8000/ws");
 
     ws.current.onmessage = (e) => {
       const msg = { sender: "doctor", text: e.data };
